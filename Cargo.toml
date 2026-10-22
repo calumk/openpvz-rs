@@ -1,0 +1,27 @@
+[package]
+name = "openpvz"
+version = "0.1.0"
+edition = "2021"
+description = "Standalone converter for PTC Creo View / ProductView PVZ files (PVZ -> GLB / STEP)"
+license = "MIT"
+authors = ["Calum Knott <calum@calumk.com>"]
+repository = "https://github.com/calumk/openpvz-rs"
+readme = "README.md"
+keywords = ["pvz", "creo", "step", "gltf", "cad"]
+categories = ["command-line-utilities", "encoding", "science"]
+exclude = ["test_files/", "target/"]
+
+[[bin]]
+name = "pvz"
+path = "src/bin/pvz.rs"
+
+[lib]
+name = "openpvz"
+path = "src/lib.rs"
+
+[dependencies]
+flate2 = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+clap = { version = "4", features = ["derive"] }

@@ -1,0 +1,9 @@
+/target/
+/test_files/
+*.pvz
+*.pvs
+*.ol
+*.glb
+*.step
+*.stp
+.DS_Store

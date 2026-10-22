@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "file": "bracket.pvz",
+      "info": { "definitions": 1, "occurrences": 1, "root_name": "BRACKET.PRT", "pvs_signature": "PV-PVS0301" },
+      "validate": { "ok": true, "geometry": { "triangles": 1200 } }
+    },
+    {
+      "file": "gearbox.pvz",
+      "info": { "definitions": 12, "occurrences": 40, "part_occurrences": 36, "root_name": "GEARBOX.ASM" },
+      "validate": { "ok": true, "geometry": { "triangles": 50000, "vertices": 51000 } },
+      "exact": [
+        { "member": "gearbox_3.ol", "expect": { "faces": 20, "coedges": 110, "shellCandidates": 1, "closedShellCandidates": 1 } }
+      ],
+      "glb": {
+        "stats": { "unique_triangles": 50000, "unique_triangle_meshes": 10, "occurrences": 40 },
+        "meshes": 10, "nodes": 40, "materials": 8
+      },
+      "step": {
+        "totals": { "closed_shells": 10 },
+        "entity_counts": { "ADVANCED_FACE": 400, "MANIFOLD_SOLID_BREP": 10, "CLOSED_SHELL": 10 }
+      }
+    },
+    {
+      "file": "large_assembly.pvz",
+      "heavy": true,
+      "probe_exact": { "parsed": 3000, "failures": 0 },
+      "validate_exact": { "validation_failures": 0 }
+    }
+  ]
+}
